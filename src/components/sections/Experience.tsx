@@ -9,18 +9,6 @@ const RE_GOLD  = "#c8a84b";
 const RE_DARK  = "#1a1408";
 const STOPS = [
   {
-    year: "2020",
-    role: "Secondary School",
-    company: "Universal High School",
-    note: "Scored 100% — laid the foundation for a disciplined engineering mindset.",
-  },
-  {
-    year: "2023",
-    role: "Intermediate",
-    company: "Srinivasa Gravity",
-    note: "98.10% — top of class. Chose Computer Science for B.Tech.",
-  },
-  {
     year: "2025",
     role: "Event Coordinator",
     company: "IEEE EdSoc KARE",
@@ -31,12 +19,6 @@ const STOPS = [
     role: "Web Developer",
     company: "SCRS KARE Club",
     note: "Building and maintaining club web platforms. Designing responsive interfaces.",
-  },
-  {
-    year: "2027",
-    role: "B.Tech CS · 9.21 CGPA",
-    company: "Kalasalingam University",
-    note: "Expected graduation. Open to Software Developer / Engineer roles.",
   },
 ];
 
@@ -73,10 +55,7 @@ export function Experience() {
       prev = v;
 
       // Update active checkpoints as car passes
-      if (v >= 86) setUnlockedCount(5);
-      else if (v >= 64) setUnlockedCount(4);
-      else if (v >= 41) setUnlockedCount(3);
-      else if (v >= 20) setUnlockedCount(2);
+      if (v >= 60) setUnlockedCount(2);
       else setUnlockedCount(1);
     });
   }, [carX, blur, tilt, trailOpacity, trailScaleX]);
@@ -88,7 +67,7 @@ export function Experience() {
   return (
     <section id="experience" className="relative px-6 py-32">
       <div className="mx-auto max-w-7xl">
-        <SectionLabel index="05" title="Experience" subtitle="My Engineering Journey" />
+        <SectionLabel index="06" title="Experience" subtitle="My Engineering Journey" />
 
         <div className="relative mt-20">
           {/* Track — RE road theme */}
@@ -155,7 +134,7 @@ export function Experience() {
           </div>
 
           {/* Checkpoints */}
-          <div className="mt-14 grid gap-6 md:grid-cols-5">
+          <div className="mt-14 grid gap-6 md:grid-cols-2">
             {STOPS.map((s, i) => {
               const isUnlocked = unlockedCount >= i + 1;
               return (

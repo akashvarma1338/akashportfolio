@@ -22,7 +22,7 @@ export function Contact() {
   return (
     <section id="contact" className="relative px-6 py-32">
       <div className="mx-auto max-w-5xl">
-        <SectionLabel index="06" title="Contact" subtitle="The Cockpit" />
+        <SectionLabel index="07" title="Contact" subtitle="The Cockpit" />
 
         <div className="mt-16 glass-panel relative overflow-hidden rounded-3xl p-2">
           {/* Dashboard shell */}
